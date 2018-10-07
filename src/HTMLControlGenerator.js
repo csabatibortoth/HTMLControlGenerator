@@ -252,7 +252,7 @@ function generateDateInput(options) {
             var input = basicGenerator(options);
             input.val(options.value);
             input.attr("name", options.name);
-            input.attr("min", optons.min);
+            input.attr("min", options.min);
             input.attr("max", options.max)
             appendHTMLWithInput(parent,input);
         } else {
