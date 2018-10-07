@@ -1,3 +1,7 @@
+//Author: Csaba Tóth https://github.com/csabatibortoth/
+//LICENCE: MIT
+//Repository: https://github.com/csabatibortoth/HTMLControlGenerator/
+
 function HTMLControlGenerator(options) {
     if (options !== undefined) {
         switch (options.inputType) {
