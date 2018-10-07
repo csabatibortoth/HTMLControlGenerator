@@ -84,8 +84,13 @@ function HTMLControlGenerator(options) {
 /* ------------------GENERATE INPUTS------------------- */
 
 function basicGenerator(options) {
-    var input = $('<input>');
-    input.attr("type", options.inputType);
+    if(options.inputType !== "select"){
+        var input = $('<input>');
+        input.attr("type", options.inputType);
+    } else {
+        var input = $('<'+ options.inputType +'>');
+    }
+
     input.attr("id", options.id);
     input.addClass(options.class);
     input.prop("readonly", options.readOnly);
@@ -489,7 +494,22 @@ function generateWeekInput(options) {
 }
 
 function generateSelectInput(options){
-
+    var parent = $('#' + options.parent);
+        if (options.parent !== undefined) {
+            var input = basicGenerator(options);
+            options.items.forEach(item => {
+                var option = $('<option>');
+                option.val(item.value);
+                option.text(item.text);
+                if(item.selected) option.attr("selected","selected");
+                input.append(option);
+            });
+            appendHTMLWithInput(parent,input);
+        } else generateError(unsupportedBrowser({
+            vname: "options.parent",
+            line: 493,
+            fname: "generateSelectInput"
+        }));
 }
 
 function appendHTMLWithInput(parent,input){
