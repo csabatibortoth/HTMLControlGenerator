@@ -204,3 +204,25 @@ HTMLControlGenerator({
         { id: "second", class: "select-item-class", value: "2", text: "Second" }
     ]
 });
+
+HTMLControlGenerator({
+    inputType: "ul",
+    parent : "ul",
+    id: "ul-list",
+    class: "ul-list-class",
+    items: [
+        { id: "first", class: "ul-list-li-class", text: "First" },
+        { id: "second", class: "ul-list-li-class", text: "Second" }
+    ]
+});
+
+HTMLControlGenerator({
+    inputType: "ol",
+    parent : "ol",
+    id: "ol-list",
+    class: "ol-list-class",
+    items: [
+        { id: "first", class: "ol-list-li-class", text: "First" },
+        { id: "second", class: "ol-list-li-class", text: "Second" }
+    ]
+});
