@@ -68,6 +68,9 @@ function HTMLControlGenerator(options) {
             case "select":
                 generateSelectInput(options);
                 break;
+            case "ul":
+                generateURLInput(options);
+                break;
             default:
                 generateError(wrongInputTypeError({
                     vname: "options",
@@ -514,6 +517,28 @@ function generateSelectInput(options){
             line: 493,
             fname: "generateSelectInput"
         }));
+}
+
+function generateURLInput(options){
+    var parent = $('#' + options.parent);
+    if (options.parent !== undefined) {
+        var ul = $('<ul>');
+        ul.attr("id",options.id);
+        ul.addClass(options.class);
+        options.items.forEach(item => {
+            var li = $('<li>');
+            li.attr("id",item.id);
+            li.addClass(item.class);
+            li.text(item.text);
+            ul.append(li);
+        });
+        appendHTMLWithInput(parent,ul);
+    } else generateError(unsupportedBrowser({
+        vname: "options.parent",
+        line: 493,
+        fname: "generateURLInput"
+    }));
+
 }
 
 function appendHTMLWithInput(parent,input){
