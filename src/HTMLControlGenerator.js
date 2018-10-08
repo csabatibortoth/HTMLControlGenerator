@@ -68,6 +68,12 @@ function HTMLControlGenerator(options) {
             case "select":
                 generateSelectInput(options);
                 break;
+            case "ul":
+                generateULInput(options);
+                break;
+            case "ol":
+                generateOLInput(options);
+                break;
             default:
                 generateError(wrongInputTypeError({
                     vname: "options",
@@ -131,7 +137,7 @@ function generateTextInput(options) {
     } else {
         generateError(undefinedError({
             vname: "options.parent",
-            line: 117,
+            line: 132,
             fname: "generateTextInput"
         }));
     }
@@ -147,7 +153,7 @@ function generatePasswordInput(options) {
     } else {
         generateError(undefinedError({
             vname: "options.parent",
-            line: 132,
+            line: 148,
             fname: "generatePasswordInput"
         }));
     }
@@ -163,7 +169,7 @@ function generateSubmitInput(options) {
     } else {
         generateError(undefinedError({
             vname: "options.parent",
-            line: 149,
+            line: 164,
             fname: "generateSubmitInput"
         }));
     }
@@ -177,7 +183,7 @@ function generateResetInput(options) {
     } else {
         generateError(undefinedError({
             vname: "options.parent",
-            line: 165,
+            line: 180,
             fname: "generateResetInput"
         }));
     }
@@ -194,7 +200,7 @@ function generateRadioInput(options) {
     } else {
         generateError(undefinedError({
             vname: "options.parent",
-            line: 179,
+            line: 194,
             fname: "generateRadioInput"
         }));
     }
@@ -211,7 +217,7 @@ function generateCheckboxInput(options) {
     } else {
         generateError(undefinedError({
             vname: "options.parent",
-            line: 196,
+            line: 211,
             fname: "generateCheckboxInput"
         }));
     }
@@ -227,7 +233,7 @@ function generateButtonInput(options) {
     } else {
         generateError(undefinedError({
             vname: "options.parent",
-            line: 213,
+            line: 228,
             fname: "generateButtonInput"
         }));
     }
@@ -243,7 +249,7 @@ function generateColorInput(options) {
     } else {
         generateError(undefinedError({
             vname: "options.parent",
-            line: 229,
+            line: 244,
             fname: "generateColorInput"
         }));
     }
@@ -262,13 +268,13 @@ function generateDateInput(options) {
         } else {
             generateError(undefinedError({
                 vname: "options.parent",
-                line: 246,
+                line: 261,
                 fname: "generateDateInput"
             }));
         }
     } else generateError(unsupportedBrowser({
         vname: "getBrowserName",
-        line: 244,
+        line: 259,
         fname: "generateDateInput",
         errorMiscInfo: "We currently developing solution for supporting: " + getBrowserName()
     }));
@@ -286,13 +292,13 @@ function generateDateTimeLocalInput(options) {
         } else {
             generateError(undefinedError({
                 vname: "options.parent",
-                line: 272,
+                line: 287,
                 fname: "generateDateTimeLocalInput"
             }));
         }
     } else generateError(unsupportedBrowser({
         vname: "getBrowserName",
-        line: 270,
+        line: 285,
         fname: "generateDateTimeLocalInput",
         errorMiscInfo: "We currently developing solution for supporting: " + getBrowserName()
     }));
@@ -309,13 +315,13 @@ function generateEmailInput(options) {
         } else {
             generateError(undefinedError({
                 vname: "options.parent",
-                line: 295,
+                line: 310,
                 fname: "generateEmailInput"
             }));
         }
     } else generateError(unsupportedBrowser({
         vname: "getBrowserName",
-        line: 293,
+        line: 308,
         fname: "generateEmailInput",
         errorMiscInfo: "We currently developing solution for supporting: " + getBrowserName()
     }));
@@ -331,7 +337,7 @@ function generateFileInput(options) {
     } else {
         generateError(undefinedError({
             vname: "options.parent",
-            line: 317,
+            line: 332,
             fname: "generateFileInput"
         }));
     }
@@ -348,13 +354,13 @@ function generateMonthInput(options) {
         } else {
             generateError(undefinedError({
                 vname: "options.parent",
-                line: 334,
+                line: 349,
                 fname: "generateMonthInput"
             }));
         }
     } else generateError(unsupportedBrowser({
         vname: "getBrowserName",
-        line: 332,
+        line: 347,
         fname: "generateMonthInput",
         errorMiscInfo: "We currently developing solution for supporting: " + getBrowserName()
     }));
@@ -372,7 +378,7 @@ function generateNumberInput(options) {
     } else {
         generateError(undefinedError({
             vname: "options.parent",
-            line: 356,
+            line: 371,
             fname: "generateNumberInput"
         }));
     }
@@ -390,7 +396,7 @@ function generateRangeInput(options) {
     } else {
         generateError(undefinedError({
             vname: "options.parent",
-            line: 374,
+            line: 389,
             fname: "generateRangeInput"
         }));
     }
@@ -406,7 +412,7 @@ function generateSearchInput(options) {
     } else {
         generateError(undefinedError({
             vname: "options.parent",
-            line: 392,
+            line: 407,
             fname: "generateSearchInput"
         }));
     }
@@ -423,13 +429,13 @@ function generateTelInput(options) {
         } else {
             generateError(undefinedError({
                 vname: "options.parent",
-                line: 409,
+                line: 424,
                 fname: "generateTelInput"
             }));
         }
     } else generateError(unsupportedBrowser({
         vname: "getBrowserName",
-        line: 407,
+        line: 422,
         fname: "generateTelInput",
         errorMiscInfo: "We currently developing solution for supporting: " + getBrowserName()
     }));
@@ -446,13 +452,13 @@ function generateTimeInput(options) {
         } else {
             generateError(undefinedError({
                 vname: "options.parent",
-                line: 432,
+                line: 447,
                 fname: "generateTimeInput"
             }));
         }
     } else generateError(unsupportedBrowser({
         vname: "getBrowserName",
-        line: 430,
+        line: 445,
         fname: "generateTimeInput",
         errorMiscInfo: "We currently developing solution for supporting: " + getBrowserName()
     }));
@@ -468,7 +474,7 @@ function generateURLInput(options) {
     } else {
         generateError(undefinedError({
             vname: "options.parent",
-            line: 454,
+            line: 469,
             fname: "generateURLInput"
         }));
     }
@@ -485,13 +491,13 @@ function generateWeekInput(options) {
         } else {
             generateError(undefinedError({
                 vname: "options.parent",
-                line: 471,
+                line: 486,
                 fname: "generateWeekInput"
             }));
         }
     } else generateError(unsupportedBrowser({
         vname: "getBrowserName",
-        line: 469,
+        line: 484,
         fname: "generateWeekInput",
         errorMiscInfo: "We currently developing solution for supporting: " + getBrowserName()
     }));
@@ -511,9 +517,51 @@ function generateSelectInput(options){
             appendHTMLWithInput(parent,input);
         } else generateError(unsupportedBrowser({
             vname: "options.parent",
-            line: 493,
+            line: 508,
             fname: "generateSelectInput"
         }));
+}
+
+function generateULInput(options){
+    var parent = $('#' + options.parent);
+    if (options.parent !== undefined) {
+        var ul = $('<ul>');
+        ul.attr("id",options.id);
+        ul.addClass(options.class);
+        options.items.forEach(item => {
+            var li = $('<li>');
+            li.attr("id",item.id);
+            li.addClass(item.class);
+            li.text(item.text);
+            ul.append(li);
+        });
+        appendHTMLWithInput(parent,ul);
+    } else generateError(unsupportedBrowser({
+        vname: "options.parent",
+        line: 527,
+        fname: "generateULInput"
+    }));
+}
+
+function generateOLInput(options){
+    var parent = $('#' + options.parent);
+    if (options.parent !== undefined) {
+        var ul = $('<ol>');
+        ul.attr("id",options.id);
+        ul.addClass(options.class);
+        options.items.forEach(item => {
+            var li = $('<li>');
+            li.attr("id",item.id);
+            li.addClass(item.class);
+            li.text(item.text);
+            ul.append(li);
+        });
+        appendHTMLWithInput(parent,ul);
+    } else generateError(unsupportedBrowser({
+        vname: "options.parent",
+        line: 548,
+        fname: "generateOLInput"
+    }));
 }
 
 function appendHTMLWithInput(parent,input){
