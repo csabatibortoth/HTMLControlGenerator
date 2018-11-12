@@ -63,5 +63,13 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
       - Support for hungarian Personal Number
       - Support for hungarian Company Registration Number
  2. Version in header
-Fixes:
+#### Fixes:
  1. Refactoring base code
+ 
+ ### 0.2.0
+ #### Added:
+ 1. <ul> and <ol> example
+    
+ ### 0.1.0
+ #### Added:
+ 1. Core input generation
