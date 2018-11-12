@@ -103,6 +103,7 @@ function basicGenerator(options) {
 
     input.attr("id", options.id);
     input.addClass(options.class);
+    input.attr("name", options.name);
     input.prop("readonly", options.readOnly);
     input.prop("disabled", options.disabled);
 
@@ -132,7 +133,7 @@ function generateTextInput(options) {
     if (options.parent !== undefined) {
         var input = basicGenerator(options);
         input.val(options.value);
-        input.attr("name", options.name);
+        
         appendHTMLWithInput(parent,input);
     } else {
         generateError(undefinedError({
@@ -148,7 +149,6 @@ function generatePasswordInput(options) {
     if (options.parent !== undefined) {
         var input = basicGenerator(options);
         input.val(options.value);
-        input.attr("name", options.name);
         appendHTMLWithInput(parent,input);
     } else {
         generateError(undefinedError({
@@ -164,7 +164,6 @@ function generateSubmitInput(options) {
     if (options.parent !== undefined) {
         var input = basicGenerator(options);
         input.val(options.value);
-        input.attr("name", options.name);
         appendHTMLWithInput(parent,input);
     } else {
         generateError(undefinedError({
@@ -194,7 +193,6 @@ function generateRadioInput(options) {
     if (options.parent !== undefined) {
         var input = basicGenerator(options);
         input.val(options.value);
-        input.attr("name", options.name);
         input.prop("checked", options.checked);
         appendHTMLWithInput(parent,input);
     } else {
@@ -211,7 +209,6 @@ function generateCheckboxInput(options) {
     if (options.parent !== undefined) {
         var input = basicGenerator(options);
         input.val(options.value);
-        input.attr("name", options.name);
         input.prop("checked", options.checked);
         appendHTMLWithInput(parent,input);
     } else {
@@ -228,7 +225,6 @@ function generateButtonInput(options) {
     if (options.parent !== undefined) {
         var input = basicGenerator(options);
         input.val(options.value);
-        input.attr("name", options.name);
         appendHTMLWithInput(parent,input);
     } else {
         generateError(undefinedError({
@@ -244,7 +240,6 @@ function generateColorInput(options) {
     if (options.parent !== undefined) {
         var input = basicGenerator(options);
         input.val(options.value);
-        input.attr("name", options.name);
         appendHTMLWithInput(parent,input);
     } else {
         generateError(undefinedError({
@@ -261,7 +256,6 @@ function generateDateInput(options) {
         if (options.parent !== undefined) {
             var input = basicGenerator(options);
             input.val(options.value);
-            input.attr("name", options.name);
             input.attr("min", options.min);
             input.attr("max", options.max)
             appendHTMLWithInput(parent,input);
@@ -287,7 +281,6 @@ function generateDateTimeLocalInput(options) {
         if (options.parent !== undefined) {
             var input = basicGenerator(options);
             input.val(options.value);
-            input.attr("name", options.name);
             appendHTMLWithInput(parent,input);
         } else {
             generateError(undefinedError({
@@ -310,7 +303,6 @@ function generateEmailInput(options) {
         if (options.parent !== undefined) {
             var input = basicGenerator(options);
             input.val(options.value);
-            input.attr("name", options.name);
             appendHTMLWithInput(parent,input);
         } else {
             generateError(undefinedError({
@@ -332,7 +324,6 @@ function generateFileInput(options) {
     if (options.parent !== undefined) {
         var input = basicGenerator(options);
         input.val(options.value);
-        input.attr("name", options.name);
         appendHTMLWithInput(parent,input);
     } else {
         generateError(undefinedError({
@@ -349,7 +340,6 @@ function generateMonthInput(options) {
         if (options.parent !== undefined) {
             var input = basicGenerator(options);
             input.val(options.value);
-            input.attr("name", options.name);
             appendHTMLWithInput(parent,input);
         } else {
             generateError(undefinedError({
@@ -371,7 +361,6 @@ function generateNumberInput(options) {
     if (options.parent !== undefined) {
         var input = basicGenerator(options);
         input.val(options.value);
-        input.attr("name", options.name);
         input.attr("min", options.min);
         input.attr("max", options.max);
         appendHTMLWithInput(parent,input);
@@ -389,7 +378,6 @@ function generateRangeInput(options) {
     if (options.parent !== undefined) {
         var input = basicGenerator(options);
         input.val(options.value);
-        input.attr("name", options.name);
         input.attr("min", options.min);
         input.attr("max", options.max);
         appendHTMLWithInput(parent,input);
@@ -407,7 +395,6 @@ function generateSearchInput(options) {
     if (options.parent !== undefined) {
         var input = basicGenerator(options);
         input.val(options.value);
-        input.attr("name", options.name);
         appendHTMLWithInput(parent,input);
     } else {
         generateError(undefinedError({
@@ -424,7 +411,6 @@ function generateTelInput(options) {
         if (options.parent !== undefined) {
             var input = basicGenerator(options);
             input.val(options.value);
-            input.attr("name", options.name);
             appendHTMLWithInput(parent,input);
         } else {
             generateError(undefinedError({
@@ -447,7 +433,6 @@ function generateTimeInput(options) {
         if (options.parent !== undefined) {
             var input = basicGenerator(options);
             input.val(options.value);
-            input.attr("name", options.name);
             appendHTMLWithInput(parent,input);
         } else {
             generateError(undefinedError({
@@ -469,7 +454,6 @@ function generateURLInput(options) {
     if (options.parent !== undefined) {
         var input = basicGenerator(options);
         input.val(options.value);
-        input.attr("name", options.name);
         appendHTMLWithInput(parent,input);
     } else {
         generateError(undefinedError({
@@ -486,7 +470,6 @@ function generateWeekInput(options) {
         if (options.parent !== undefined) {
             var input = basicGenerator(options);
             input.val(options.value);
-            input.attr("name", options.name);
             appendHTMLWithInput(parent,input);
         } else {
             generateError(undefinedError({
