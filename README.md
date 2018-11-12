@@ -56,15 +56,19 @@ HTMLControlGenerator({
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Releases
+ ### 0.3.1
+ #### Added:
+ 1. Minified versions
+
  ### 0.3.0
  #### Added:
- 1. Addons
-      - Support for hungarian TAX Number
-      - Support for hungarian Personal Number
-      - Support for hungarian Company Registration Number
- 2. Version in header
-#### Fixes:
- 1. Refactoring base code
+  1. Addons
+       - Support for hungarian TAX Number
+       - Support for hungarian Personal Number
+       - Support for hungarian Company Registration Number
+  2. Version in header
+ #### Fixes:
+  1. Refactoring base code
  
  ### 0.2.0
  #### Added:
@@ -72,4 +76,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
     
  ### 0.1.0
  #### Added:
- 1. Core input generation
+  1. Core input generation
