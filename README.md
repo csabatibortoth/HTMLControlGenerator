@@ -52,3 +52,8 @@ HTMLControlGenerator({
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
+## Releases
+
+ ### 0.1.0
+ #### Added:
+ 1. Core input generation
