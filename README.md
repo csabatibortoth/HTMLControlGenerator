@@ -68,7 +68,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
  
  ### 0.2.0
  #### Added:
- 1. <ul> and <ol> example
+    <ul> and <ol> example
     
  ### 0.1.0
  #### Added:
