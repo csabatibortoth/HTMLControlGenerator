@@ -3,8 +3,12 @@ HTMLControlGenerator({
     parent: "text",
     id: "text-field",
     class: "text-filed-class",
-    change: function(data) {console.log(data)},
-    onclick: function(){console.log("click")}
+    change: function (data) {
+        console.log(data)
+    },
+    onclick: function () {
+        console.log("click")
+    }
 });
 
 HTMLControlGenerator({
@@ -12,8 +16,12 @@ HTMLControlGenerator({
     parent: "password",
     id: "password-field",
     class: "password-field-class",
-    change: function(data) {console.log(data)},
-    onclick: function() {console.log("click")}
+    change: function (data) {
+        console.log(data)
+    },
+    onclick: function () {
+        console.log("click")
+    }
 });
 
 HTMLControlGenerator({
@@ -23,7 +31,9 @@ HTMLControlGenerator({
     value: "Submit Button",
     id: "submit-field",
     class: "submit-filed-class",
-    onclick: function(){console.log("click")}
+    onclick: function () {
+        console.log("click")
+    }
 });
 
 HTMLControlGenerator({
@@ -35,46 +45,56 @@ HTMLControlGenerator({
 });
 
 var radios = [{
-    inputType: "radio",
-    parent: "radio",
-    text: "radio button 1",
-    value: "1",
-    id: "radio-button-1",
-    class: "submit-filed-class",
-    onclick: function(){console.log("click")}
-},
-{
-    inputType: "radio",
-    parent: "radio",
-    text: "radio button 2",
-    value: "2",
-    id: "radio-button-",
-    class: "radio-filed-class",
-    onclick: function(){console.log("click")}
-}];
+        inputType: "radio",
+        parent: "radio",
+        text: "radio button 1",
+        value: "1",
+        id: "radio-button-1",
+        class: "submit-filed-class",
+        onclick: function () {
+            console.log("click")
+        }
+    },
+    {
+        inputType: "radio",
+        parent: "radio",
+        text: "radio button 2",
+        value: "2",
+        id: "radio-button-",
+        class: "radio-filed-class",
+        onclick: function () {
+            console.log("click")
+        }
+    }
+];
 
 radios.forEach(radio => {
     HTMLControlGenerator(radio);
 });
 
 var checkboxes = [{
-    inputType: "checkbox",
-    parent: "checkbox",
-    text: "checkbox button 1",
-    value: "1",
-    id: "checkbox-button-1",
-    class: "submit-filed-class",
-    onclick: function(){console.log("click")}
-},
-{
-    inputType: "radio",
-    parent: "radio",
-    text: "radio button 2",
-    value: "2",
-    id: "radio-button-",
-    class: "submit-filed-class",
-    onclick: function(){console.log("click")}
-}];
+        inputType: "checkbox",
+        parent: "checkbox",
+        text: "checkbox button 1",
+        value: "1",
+        id: "checkbox-button-1",
+        class: "submit-filed-class",
+        onclick: function () {
+            console.log("click")
+        }
+    },
+    {
+        inputType: "radio",
+        parent: "radio",
+        text: "radio button 2",
+        value: "2",
+        id: "radio-button-",
+        class: "submit-filed-class",
+        onclick: function () {
+            console.log("click")
+        }
+    }
+];
 
 checkboxes.forEach(checkbox => {
     HTMLControlGenerator(checkbox);
@@ -147,6 +167,33 @@ HTMLControlGenerator({
 });
 
 HTMLControlGenerator({
+    inputType: "hunPIN",
+    parent: "hunPIN",
+    text: "number Button",
+    id: "hunPIN-field",
+    class: "hunPIN-filed-class",
+    value: ""
+});
+
+HTMLControlGenerator({
+    inputType: "hunCRID",
+    parent: "hunCRID",
+    text: "number Button",
+    id: "hunCRID-field",
+    class: "hunCRID-filed-class",
+    value: ""
+});
+
+HTMLControlGenerator({
+    inputType: "hunTID",
+    parent: "hunTID",
+    text: "number Button",
+    id: "hunTID-field",
+    class: "hunTID-filed-class",
+    value: ""
+});
+
+HTMLControlGenerator({
     inputType: "range",
     parent: "range",
     text: "range Button",
@@ -196,33 +243,57 @@ HTMLControlGenerator({
 
 HTMLControlGenerator({
     inputType: "select",
-    parent : "select",
+    parent: "select",
     id: "selector",
     class: "selector-class",
-    items: [
-        { id: "first", class: "select-item-class", value: "1", text: "First", selected: true },
-        { id: "second", class: "select-item-class", value: "2", text: "Second" }
+    items: [{
+            id: "first",
+            class: "select-item-class",
+            value: "1",
+            text: "First",
+            selected: true
+        },
+        {
+            id: "second",
+            class: "select-item-class",
+            value: "2",
+            text: "Second"
+        }
     ]
 });
 
 HTMLControlGenerator({
     inputType: "ul",
-    parent : "ul",
+    parent: "ul",
     id: "ul-list",
     class: "ul-list-class",
-    items: [
-        { id: "first", class: "ul-list-li-class", text: "First" },
-        { id: "second", class: "ul-list-li-class", text: "Second" }
+    items: [{
+            id: "first",
+            class: "ul-list-li-class",
+            text: "First"
+        },
+        {
+            id: "second",
+            class: "ul-list-li-class",
+            text: "Second"
+        }
     ]
 });
 
 HTMLControlGenerator({
     inputType: "ol",
-    parent : "ol",
+    parent: "ol",
     id: "ol-list",
     class: "ol-list-class",
-    items: [
-        { id: "first", class: "ol-list-li-class", text: "First" },
-        { id: "second", class: "ol-list-li-class", text: "Second" }
+    items: [{
+            id: "first",
+            class: "ol-list-li-class",
+            text: "First"
+        },
+        {
+            id: "second",
+            class: "ol-list-li-class",
+            text: "Second"
+        }
     ]
 });
