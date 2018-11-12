@@ -172,7 +172,25 @@ HTMLControlGenerator({
     text: "number Button",
     id: "hunPIN-field",
     class: "hunPIN-filed-class",
-    vals: []
+    value: ""
+});
+
+HTMLControlGenerator({
+    inputType: "hunCRID",
+    parent: "hunCRID",
+    text: "number Button",
+    id: "hunCRID-field",
+    class: "hunCRID-filed-class",
+    value: ""
+});
+
+HTMLControlGenerator({
+    inputType: "hunTID",
+    parent: "hunTID",
+    text: "number Button",
+    id: "hunTID-field",
+    class: "hunTID-filed-class",
+    value: ""
 });
 
 HTMLControlGenerator({

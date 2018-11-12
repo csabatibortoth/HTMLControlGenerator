@@ -79,6 +79,16 @@ function HTMLControlGenerator(options) {
                     generateHungarianPersonalInsuranceNumber(options);
                 }
                 break;
+            case "hunCRID":
+                if (typeof generateHungarianCompanyRegistrationID === "function") {
+                    generateHungarianCompanyRegistrationID(options);
+                }
+                break;
+            case "hunTID":
+                if (typeof generateHungarianTAXNumber === "function") {
+                    generateHungarianTAXNumber(options);
+                }
+                break;
             default:
                 generateError(wrongInputTypeError({
                     vname: "options",
