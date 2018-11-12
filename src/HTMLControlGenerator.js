@@ -564,7 +564,7 @@ function generateOLInput(options) {
 }
 
 function appendHTMLWithInput(parent, input) {
-    if (parent.length !== 0) {
+    if (parent.length !== 1) {
         parent.append(input);
     } else {
         var div = $('<div>');
