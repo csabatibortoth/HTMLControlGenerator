@@ -1,6 +1,7 @@
 //Author: Csaba Tóth https://github.com/csabatibortoth/
 //LICENCE: MIT
 //Repository: https://github.com/csabatibortoth/HTMLControlGenerator/
+//version: 0.0.1
 
 function generateHungarianPersonalInsuranceNumber(options) {
     var parent = $('#' + options.parent);
