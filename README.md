@@ -56,6 +56,11 @@ HTMLControlGenerator({
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Releases
+ ### 0.3.2
+ #### Added:
+ 1. Fix
+
+## Releases
  ### 0.3.1
  #### Added:
  1. Minified versions
