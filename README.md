@@ -50,12 +50,18 @@ HTMLControlGenerator({
 ## Authors
 
 * **Csaba Tóth** - *Initial work* - [csabatibortoth](https://github.com/csabatibortoth)
+* **Page:** - https://csaba.toth.today/projects/htmlcontrolgenerator/
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Releases
+ ### 0.3.3
+ #### Added:
+ 1. Fixes
+
+
  ### 0.3.2
  #### Added:
  1. Fix
