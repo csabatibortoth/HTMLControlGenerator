@@ -1,7 +1,7 @@
 //Author: Csaba Tóth https://github.com/csabatibortoth/
 //LICENCE: MIT
 //Repository: https://github.com/csabatibortoth/HTMLControlGenerator/
-//Version: 0.3.2
+//Version: 0.3.3
 
 function HTMLControlGenerator(options) {
     if (options !== undefined) {
