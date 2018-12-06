@@ -50,6 +50,7 @@ HTMLControlGenerator({
 ## Authors
 
 * **Csaba Tóth** - *Initial work* - [csabatibortoth](https://github.com/csabatibortoth)
+* **Page:** - https://csaba.toth.today/projects/htmlcontrolgenerator/
 
 ## License
 
