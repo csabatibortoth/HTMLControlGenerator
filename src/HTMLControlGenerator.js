@@ -532,6 +532,21 @@ function generateULInput(options) {
             li.attr("id", item.id);
             li.addClass(item.class);
             li.text(item.text);
+            li.on(function () {
+                if (item.onchange !== undefined) {
+                    item.onchange(options.data);
+                }
+            });
+            li.change(function(){
+                if (item.onchange !== undefined) {
+                    item.onchange(item.data);
+                }
+            });
+            li.click(function(){
+                if (item.onclick !== undefined) {
+                    item.onclick(item.data);
+                }
+            });
             ul.append(li);
         });
         appendHTMLWithInput(parent, ul);
@@ -545,15 +560,30 @@ function generateULInput(options) {
 function generateOLInput(options) {
     var parent = $('#' + options.parent);
     if (options.parent !== undefined) {
-        var ul = $('<ol>');
-        ul.attr("id", options.id);
-        ul.addClass(options.class);
+        var ol = $('<ol>');
+        ol.attr("id", options.id);
+        ol.addClass(options.class);
         options.items.forEach(item => {
             var li = $('<li>');
             li.attr("id", item.id);
             li.addClass(item.class);
             li.text(item.text);
-            ul.append(li);
+            li.on(function () {
+                if (options.onchange !== undefined) {
+                    options.onchange(options.data);
+                }
+            });
+            li.change(function(){
+                if (options.onchange !== undefined) {
+                    options.onchange(options.data);
+                }
+            });
+            li.click(function(){
+                if (options.onclick !== undefined) {
+                    options.onclick(options.data);
+                }
+            });
+            ol.append(li);
         });
         appendHTMLWithInput(parent, ul);
     } else generateError(unsupportedBrowser({
