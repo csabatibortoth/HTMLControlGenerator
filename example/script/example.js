@@ -3,10 +3,10 @@ HTMLControlGenerator({
     parent: "text",
     id: "text-field",
     class: "text-filed-class",
-    change: function (data) {
+    onchange(data) {
         console.log(data)
     },
-    onclick: function () {
+    onclick() {
         console.log("click")
     }
 });
@@ -16,10 +16,10 @@ HTMLControlGenerator({
     parent: "password",
     id: "password-field",
     class: "password-field-class",
-    change: function (data) {
+    onchange(data) {
         console.log(data)
     },
-    onclick: function () {
+    onclick() {
         console.log("click")
     }
 });
@@ -31,7 +31,7 @@ HTMLControlGenerator({
     value: "Submit Button",
     id: "submit-field",
     class: "submit-filed-class",
-    onclick: function () {
+    onclick() {
         console.log("click")
     }
 });
@@ -44,14 +44,14 @@ HTMLControlGenerator({
     class: "reset-filed-class"
 });
 
-var radios = [{
+const radios = [{
         inputType: "radio",
         parent: "radio",
         text: "radio button 1",
         value: "1",
         id: "radio-button-1",
         class: "submit-filed-class",
-        onclick: function () {
+        onclick() {
             console.log("click")
         }
     },
@@ -60,9 +60,9 @@ var radios = [{
         parent: "radio",
         text: "radio button 2",
         value: "2",
-        id: "radio-button-",
+        id: "radio-button-2",
         class: "radio-filed-class",
-        onclick: function () {
+        onclick() {
             console.log("click")
         }
     }
@@ -72,25 +72,25 @@ radios.forEach(radio => {
     HTMLControlGenerator(radio);
 });
 
-var checkboxes = [{
+const checkboxes = [{
         inputType: "checkbox",
         parent: "checkbox",
         text: "checkbox button 1",
         value: "1",
         id: "checkbox-button-1",
         class: "submit-filed-class",
-        onclick: function () {
+        onclick() {
             console.log("click")
         }
     },
     {
-        inputType: "radio",
-        parent: "radio",
-        text: "radio button 2",
+        inputType: "checkbox",
+        parent: "checkbox",
+        text: "checkbox button 2",
         value: "2",
-        id: "radio-button-",
+        id: "checkbox-button-2",
         class: "submit-filed-class",
-        onclick: function () {
+        onclick() {
             console.log("click")
         }
     }
