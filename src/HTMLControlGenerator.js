@@ -1,7 +1,7 @@
 //Author: Csaba Tóth https://github.com/csabatibortoth/
 //LICENCE: MIT
 //Repository: https://github.com/csabatibortoth/HTMLControlGenerator/
-//Version: 0.3.3
+//Version: 0.4.0
 
 (() => {
     "use strict";
