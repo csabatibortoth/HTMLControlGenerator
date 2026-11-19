@@ -1,5 +1,9 @@
 # HTMLControlGenerator
 
+> **This project is no longer developed.** HTMLControlGenerator is being folded into [Athena UI](https://github.com/csabatibortoth/athena-ui)
+> (`athena-ui-js` on npm), which carries the same `HTMLControlGenerator(options)` and `HTMLControlGenerator.create(options)` calls, without needing jQuery. This repository stays online for now so that existing projects keep working, but it
+> receives no new features and no fixes. Please move to Athena UI. The repository will be archived at a later date.
+
 A small jQuery based tool to generate HTML5 input controls from a plain options object.
 
 ```js
@@ -158,6 +162,11 @@ Open `example/index.html` in a browser, it generates every control.
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## Releases
+
+### 0.4.1
+
+#### Changed:
+1. Notice added: the project is no longer developed, its function moves into Athena UI. No change to the code.
 
 ### 0.4.0
 
